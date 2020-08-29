@@ -8,12 +8,14 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 
 import MoodList from './app/MoodList';
+import {StatusBar} from 'react-native';
 // import AddMood from './app/AddMood';
 
 const Stack = createStackNavigator();
 
 export default (): React.ReactFragment => (
   <>
+    <StatusBar barStyle="dark-content" backgroundColor="#fff" />
     <IconRegistry icons={EvaIconsPack} />
     <ApplicationProvider {...eva} theme={eva.light}>
       <NavigationContainer>
